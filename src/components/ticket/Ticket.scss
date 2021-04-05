@@ -1,0 +1,160 @@
+.ticket {
+  margin: 1px auto;
+  width: 95%;
+  max-width: 1280px;
+  height: 75px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+.number {
+  width: 7%;
+  max-width: 185px;
+  display: flex;
+  align-items: flex-start;
+  margin-left: 5px;
+}
+.number__value {
+  padding: 2px;
+  color: #ffffff;
+  background-color: #EE7771;
+  border-radius: 2px;
+}
+.user {
+  width: 19%;
+  max-width: 240px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.user__avatar {
+  width: 45px;
+}
+.user__name {
+  margin-left: 10px;
+}
+.description {
+  width: 34%;
+  max-width: 430px;
+  height: 30px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #F6F6F6;
+  border-radius: 5px;
+  border-left: 3px solid #C1C1C1;
+}
+.type {
+  padding: 0;
+  margin: 0;
+}
+.type__choise {
+  color: #7FBBC6;
+}
+.description__text {
+  text-align: start;
+  width: 95%;
+  max-width: 400px;
+  margin-top: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.state {
+  width: 24%;
+  max-width: 320px;
+  display: flex;
+  flex-direction: row;
+  margin-left: 8px;
+}
+.state__status {
+  display: flex;
+  align-items: flex-start;
+  width: 160px;
+  &:before {
+    margin-right: 3px;
+    content: ' \25CF';
+    font-size: 10px;
+  }
+}
+.state__status-new {
+  &:before {
+    color: #a9d86e;
+  }
+}
+.state__status-processing {
+  &:before {
+    color: #ff6c60;
+  }
+}
+.state__status-postponed {
+  &:before {
+    color: #fcb322;
+  }
+}
+.state__status-close {
+  &:before {
+    color: #bec3c7;
+  }
+}
+.state__priority {
+  display: flex;
+  align-items: flex-start;
+  width: 160px;
+  &:before {
+    margin-right: 3px;
+    content: '!';
+    font-size: 10px;
+    color: #B9C49C;
+  }
+}
+@media (max-width: 768px) {
+  .ticket {
+    max-width: 768px;
+    height: auto;
+    padding: 10px;
+  }
+
+  .user {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .description {
+    height: auto;
+    text-align: start
+  }
+
+  .state {
+    width: 12%;
+    flex-direction: column;
+  }
+
+  .ticket__date {
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 320px) {
+  .ticket {
+    width: 280px;
+    height: auto;
+    margin: 10px auto 0 auto;
+    flex-direction: column;
+
+  }
+  .user, .state, .ticket__date {
+    margin-top: 10px;
+  }
+  .description {
+    width: 250px;
+    margin-top: 10px;
+  }
+  .state {
+    flex-direction: column;
+  }
+}
